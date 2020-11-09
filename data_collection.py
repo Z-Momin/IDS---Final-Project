@@ -112,7 +112,7 @@ if __name__ == "__main__":
                 print("\n[EPISODE]: {}".format(episdoe))
                 print("[AVERAGE EPISODE REWARD]: " + "{:0.2f}".format(np.array(episode_rewards).mean() if len(episode_rewards) != 0 else episode_reward))
 
-            if RECORD and iteration % 100 == 0:
+            if RECORD and iteration % 2500 == 0:
                 print('... saving data')
                 store_data(replay_buffer, data_fn, "./data")
                 save_results(episode_rewards, results_fn,"./results")
