@@ -93,7 +93,7 @@ if __name__ == "__main__":
     episode_rewards = []
     iteration = 0
 
-    for episdoe in count():
+    for episode in count():
 
         episode_reward = 0
         state = env.reset()
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
             if iteration % 500 == 0 or done:
                 print("\n[ITERATION]: {}".format(iteration))
-                print("\n[EPISODE]: {}".format(episdoe))
+                print("\n[EPISODE]: {}".format(episode))
                 print("[AVERAGE EPISODE REWARD]: " + "{:0.2f}".format(np.array(episode_rewards).mean() if len(episode_rewards) != 0 else episode_reward))
 
             if RECORD and iteration % 2500 == 0:
